@@ -8,6 +8,7 @@ set number
 set bs=2
 set ruler
 set history=50
+set termencoding=utf-8
 nmap ,l :set list!
 nmap ,p :set noautoindent
 nmap ,pp :set autoindent
