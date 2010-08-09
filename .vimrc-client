@@ -38,9 +38,10 @@ syntax on
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 map <F2> a== <C-R>=strftime("%r")<CR> ==<CR><CR>
-map <F7> :setlocal spell! spelllang=en_us<CR>
-map <leader>tt <Plug>VimwikiToggleListItem
 map <F3> :VimwikiSearch 
+map <F7> :setlocal spell! spelllang=en_us<CR>
+map <F12> :Calendar<CR>
+map <leader>tt <Plug>VimwikiToggleListItem
 " function list
 function! Browser ()
   let line0 = getline (".")
@@ -55,3 +56,4 @@ function! Browser ()
   exec ":silent !firefox ".line
 endfunction
 map <C-F3> :call Browser ()<CR>
+
