@@ -2,8 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-PS1="\n\[\033[33;1m\]\w\[\033[m\]\n\[\033[35m\]\d\[\033[m\] -> "
-
+# Lite Prompt
+# PS1="\n\[\033[33;1m\]\w\[\033[m\]\n\[\033[35m\]\d\[\033[m\] -> "
+# Not sure when this is fired off
+# If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -11,6 +13,9 @@ PS1="\n\[\033[33;1m\]\w\[\033[m\]\n\[\033[35m\]\d\[\033[m\] -> "
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 export HISTCONTROL=ignoreboth
+
+# Pretty grep
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 # append to the history file, don't overwrite it
 shopt -s histappend
