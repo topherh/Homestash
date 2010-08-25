@@ -7,6 +7,7 @@ nmap ,w :set wrap
 nmap ,pp :set autoindent
 nmap ,p :set noautoindent
 nmap ,l :set list!
+let @h = "yypVr"
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 map <S-Insert> <MiddleMouse>
