@@ -1,15 +1,23 @@
+"python is happiest here
 set tabstop=4
 set shiftwidth=4
 set expandtab
+"personal preferences
 set hlsearch
 set nowrap
 set autoindent
 set number
-set bs=2
 set ruler
 set history=50
+"not sure on this one
+set bs=2
+"locally set helper macros
 nmap ,l :set list!
 nmap ,p :set noautoindent
 nmap ,pp :set autoindent
 nmap ,w :set wrap
 nmap ,ww :set nowrap
+let @h = "yypVr"
+"editor improvements
+match OverLength /\%81v.\+/
+set helplang=en
