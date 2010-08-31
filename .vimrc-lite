@@ -19,5 +19,4 @@ nmap ,w :set wrap
 nmap ,ww :set nowrap
 let @h = "yypVr"
 "editor improvements
-match OverLength /\%81v.\+/
 set helplang=en
