@@ -1,0 +1,3 @@
+defscrollback 5000
+caption always "%?%F%{= Bk}%? %H %{= kB} %t%= %?%F%{= Bk}%:%{= wk}%? %n "
+startup_message off
