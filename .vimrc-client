@@ -45,6 +45,7 @@ nmap ,l :set list!
 let @h = "yypVr"
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+" nnoremap <silent> <F8> :TlistToggle<CR>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 "Wiki/Documentation
