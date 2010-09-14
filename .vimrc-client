@@ -1,33 +1,31 @@
+"actually not sure what this does
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-map! <S-Insert> <MiddleMouse>
-nmap ,ww :set nowrap
-nmap ,w :set wrap
-nmap ,pp :set autoindent
-nmap ,p :set noautoindent
-nmap ,l :set list!
-let @h = "yypVr"
-nmap gx <Plug>NetrwBrowseX
-nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
-map <S-Insert> <MiddleMouse>
 let &cpo=s:cpo_save
 unlet s:cpo_save
+"plugins need it
+filetype plugin on
+syntax on
+"python coding bonus
 set tabstop=4
 set shiftwidth=4
 set hlsearch
 set nowrap
 set autoindent
 set number
+set backspace=indent,eol,start
+set expandtab
+"make it more universal
 if has('gui_running')
+    map <S-Insert> <MiddleMouse>
     colorscheme koehler 
     set mouse=a
 else
     " Do nothing
+    map! <S-Insert> <MiddleMouse>
     set background=dark
 endif
-set backspace=indent,eol,start
-set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set helplang=en
 set history=50
@@ -39,15 +37,25 @@ set termencoding=utf-8
 set bs=2
 " vim: set ft=vim :
 set nocompatible
-filetype plugin on
-syntax on
+nmap ,ww :set nowrap
+nmap ,w :set wrap
+nmap ,pp :set autoindent
+nmap ,p :set noautoindent
+nmap ,l :set list!
+let @h = "yypVr"
+nmap gx <Plug>NetrwBrowseX
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+" nnoremap <silent> <F8> :TlistToggle<CR>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+"Wiki/Documentation
 map <F2> a== <C-R>=strftime("%r")<CR> ==<CR><CR>
 map <F3> :VimwikiSearch 
 map <F7> :setlocal spell! spelllang=en_us<CR>
-map <F12> :Calendar<CR>
+map <leader>wc :Calendar<CR>
 map <leader>tt <Plug>VimwikiToggleListItem
+map <leader>wg :VimwikiGoto 
+let g:netrw_list_hide  = '.swp,\.svn,\.pyo,\.pyc'
 " function list
 function! Browser ()
   let line0 = getline (".")
