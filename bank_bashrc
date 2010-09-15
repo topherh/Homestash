@@ -1,0 +1,2 @@
+alias upush='wwwuinst -push'
+alias ushow='wwwuinst -show'
