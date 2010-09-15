@@ -1,0 +1,6 @@
+alias ss='sudo -u somebody'
+alias ph='cd /data/plone/uwmarketing.buildout'
+alias tp='curl -I -m10 localhost:8081 && curl -I -m10 localhost:8082'
+export CDPATH='./:~/:/data/:/data/plone/uwmarketing.buildout/'
+cd /data/plone/uwmarketing.buildout
+
