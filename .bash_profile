@@ -1,11 +1,22 @@
-alias ls='ls -G'
-alias ll='ls -lh'
-alias la='ls -liah'
-export LSCOLORS="gxfxcxdxbxegedabagacad"
-export PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
 
-# MacPorts Installer addition on 2010-06-15_at_09:50:50: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
+PS1="\n\[\033[33;1m\]\w\[\033[m\]\n\[\033[32m\]\h\[\033[m\] \[\033[35m\]\d\[\033[m\] -> "
+export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 set -o vi
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
