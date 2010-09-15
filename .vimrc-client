@@ -41,15 +41,14 @@ set termencoding=utf-8
 set bs=2
 " vim: set ft=vim :
 set nocompatible
-nmap ,ww :set nowrap
-nmap ,w :set wrap
-nmap ,pp :set autoindent
-nmap ,p :set noautoindent
-nmap ,l :set list!
 let @h = "yypVr"
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
-" nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap ,n :set number!<CR>
+nnoremap ,l :set list!<CR>
+nnoremap ,w :set wrap!<CR>
+nnoremap ,p :set autoindent!<CR>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 "Wiki/Documentation
@@ -59,7 +58,8 @@ map <F7> :setlocal spell! spelllang=en_us<CR>
 map <leader>wc :Calendar<CR>
 map <leader>tt <Plug>VimwikiToggleListItem
 map <leader>wg :VimwikiGoto 
-let g:netrw_list_hide  = '.swp,\.svn,\.pyo,\.pyc'
+let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
+let g:netrw_liststyle = 3
 " function list
 function! Browser ()
   let line0 = getline (".")

@@ -13,11 +13,10 @@ set termencoding=utf-8
 "not sure on this one
 set bs=2
 "locally set helper macros
-nmap ,l :set list!
-nmap ,p :set noautoindent
-nmap ,pp :set autoindent
-nmap ,w :set wrap
-nmap ,ww :set nowrap
+nnoremap ,n :set number!<CR>
+nnoremap ,l :set list!<CR>
+nnoremap ,w :set wrap!<CR>
+nnoremap ,p :set autoindent!<CR>
 let @h = "yypVr"
 "editor improvements
 set helplang=en
