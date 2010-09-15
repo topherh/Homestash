@@ -21,9 +21,8 @@ case $- in
    umask 002
 
    # Machine specific
-   HOST=`hostname -a`
-   if [ -f ~/.$HOST_bashrc ]; then
-       . ~/.$HOST_bashrc
+   if [ -f ~/.host_bashrc ]; then
+       . ~/.host_bashrc
    fi
 
 esac
