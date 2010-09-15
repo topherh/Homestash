@@ -9,6 +9,7 @@ set autoindent
 set number
 set ruler
 set history=50
+set termencoding=utf-8
 "not sure on this one
 set bs=2
 "locally set helper macros

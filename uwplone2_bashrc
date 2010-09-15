@@ -1,0 +1,5 @@
+alias ss='sudo -u somebody'
+alias ph='cd /data/plone/uwmarketing.buildout'
+export CDPATH='./:~/:/data/:/data/plone/uwmarketing.buildout/'
+export PATH=$PATH':~/bin'
+cd /data/plone/uwmarketing.buildout
