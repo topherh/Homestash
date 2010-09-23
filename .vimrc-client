@@ -19,7 +19,7 @@ set expandtab
 "make it more universal
 if has('gui_running')
     map <S-Insert> <MiddleMouse>
-    ## colorscheme pablo
+    " colorscheme pablo
     colorscheme koehler 
     set mouse=a
     " Remove menu bar
