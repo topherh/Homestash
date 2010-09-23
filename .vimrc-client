@@ -19,6 +19,7 @@ set nowrap
 set autoindent
 set number
 set background=dark
+colorscheme pablo
 set backspace=indent,eol,start
 set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
