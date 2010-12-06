@@ -55,6 +55,7 @@ match OverLength /\%81v.\+/
 "Wiki/Documentation
 map <F2> a== <C-R>=strftime("%r")<CR> ==<CR><CR>
 map <F3> :VimwikiSearch 
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 map <F7> :setlocal spell! spelllang=en_us<CR>
 map <leader>wc :Calendar<CR>
 map <leader>tt <Plug>VimwikiToggleListItem
