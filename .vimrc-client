@@ -50,6 +50,9 @@ nnoremap <silent> ,n :set number!<CR>
 nnoremap <silent> ,l :set list!<CR>
 nnoremap <silent> ,w :set wrap!<CR>
 nnoremap <silent> ,p :set autoindent!<CR>
+nnoremap <silent> ,d :diffthis<CR>
+nnoremap <silent> ,D :diffoff<CR>
+nnoremap <silent> ,DD :diffoff!<CR>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 "Wiki/Documentation
