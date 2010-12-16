@@ -1,7 +1,8 @@
-alias ll='ls -l'
+alias l='ls -CF'
 alias lla='ls -la'
 alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -l'
+alias lh='ll -h'
 ## New ##
 alias cll='clear;ll'
 alias tf='tail -f'
