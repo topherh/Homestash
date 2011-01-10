@@ -1,2 +1,6 @@
+alias cwd="pwd | sed -e 's:/usr/users/cheiland/::'"
 alias upush='wwwuinst -push'
 alias ushow='wwwuinst -show'
+
+alias upushc='echo Pushing: `cwd`;wwwuinst -push `cwd`'
+alias ushowc='echo Not Pushing: `cwd`;wwwuinst -show `cwd`'
