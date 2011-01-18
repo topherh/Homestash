@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+for i in `svn st | awk '{print $2}'`; do
+STATUS=`svn st $i | awk '{print $1}'`;
+echo Executing command: $1 on files:
+if [ $STATUS == '?' ]
+then
+    echo $i;
+    $1 $i;
+fi
+done
+
