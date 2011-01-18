@@ -1,0 +1,3 @@
+#!/bin/sh
+
+curl -s http://dummyimage.com/$1/000/fff -o Pictures/Samples/$1.jpg
