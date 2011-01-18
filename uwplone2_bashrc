@@ -1,5 +1,7 @@
 alias ss='sudo -u somebody'
+alias sbn='sudo -u somebody bin/buildout -No'
 alias ph='cd /data/plone/uwmarketing.buildout'
-export CDPATH='./:~/:/data/:/data/plone/uwmarketing.buildout/'
+alias tp='curl -I -m10 localhost:9480'
+#export CDPATH='./:~/:/data/:/data/plone/uwmarketing.buildout/'
 export PATH=$PATH':~/bin'
 cd /data/plone/uwmarketing.buildout
