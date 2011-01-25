@@ -1,11 +1,11 @@
 #!/bin/bash
 
+echo "Executing command(s)":
 for i in `svn st | awk '{print $2}'`; do
 STATUS=`svn st $i | awk '{print $1}'`;
-echo Executing command: $1 $2 $3 on files:
 if [ $STATUS == '?' ]
 then
-    echo $i;
+    echo $1 $2 $3 $i;
     $1 $2 $3 $i;
 fi
 done
