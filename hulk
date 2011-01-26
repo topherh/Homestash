@@ -1,5 +1,14 @@
 #!/bin/bash
 
+################################################################################
+#### Name: Hulk                                                         ########
+#### Created: 20 Jan 2011                                               ########
+#### Owner: cheiland@uw.edu                                             ########
+#### Description:                                                       ########
+#### Script to take an arbetrary command with params and exec on files  ########
+#### marked by a '?' when running svn st                                ########
+################################################################################
+
 echo -ne "\033[01;32mExecuting command(s)\e[0m:\n\n"
 for i in `svn st | awk '{print $2}'`; do
 STATUS=`svn st $i | awk '{print $1}'`;
