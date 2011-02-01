@@ -9,12 +9,12 @@
 #### marked by a '?' when running svn st                                ########
 ################################################################################
 
-echo -ne "\033[01;32mExecuting command(s)\e[0m:\n\n"
+echo -ne "\033[01;32mExecuting command(s)\033[0m:\n\n"
 for i in `svn st | awk '{print $2}'`; do
 STATUS=`svn st $i | awk '{print $1}'`;
 if [ "$STATUS" = "?" ]
 then
-    echo -e "\033[01;31m"$@"\e[0m" $i;
+    echo -e "\033[01;31m"$@"\033[0m" $i;
     $@ $i;
 fi
 done
