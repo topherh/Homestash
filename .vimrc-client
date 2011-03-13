@@ -6,6 +6,7 @@ let &cpo=s:cpo_save
 unlet s:cpo_save
 "plugins need it
 filetype plugin on
+let b:match_ignorecase = 1
 syntax on
 "python coding bonus
 set tabstop=4
