@@ -14,6 +14,8 @@ set hlsearch
 set nowrap
 set autoindent
 set number
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 set backspace=indent,eol,start
 set expandtab
 "make it more universal
