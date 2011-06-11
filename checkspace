@@ -1,11 +1,13 @@
 #!/bin/bash
 
-UWPLONE1=`ssh uwplone1 df -h '/dev/sda1'| awk '{print $5}'`
+#UWPLONE1=`ssh uwplone1 df -h '/dev/sda1'| awk '{print $5}'`
 UWPLONE2=`ssh uwplone2 df -h '/dev/sda1' | awk '{print $5}'`
 UWPLONE3=`ssh uwplone3 df -h '/dev/mapper/datavg-data' | awk '{print $4}'`
 UWMAVM=`ssh uwmavm df -h '/dev/sda1' | awk '{print $5}'`
+EMERG=`ssh emergency df -h '/dev/sda1' | awk '{print $5}'`
 
-echo -n "UW Plone 1: ";echo $UWPLONE1| sed 's/Use% //'
-echo -n "UW Plone 2: ";echo $UWPLONE2| sed 's/Use% //'
-echo -n "UW Plone 3: ";echo $UWPLONE3| sed 's/Avail //'
-echo -n "UW MA VM 1: ";echo $UWMAVM| sed 's/Use% //'
+#echo -n "UW Plone 1: ";echo $UWPLONE1| sed 's/Use% //'
+echo -ne "CMS Devel : \t";echo $UWPLONE2| sed 's/Use% //'
+echo -ne "CMS Prod  : \t";echo $UWPLONE3| sed 's/Avail //'
+echo -ne "UW MA VM  : \t";echo $UWMAVM| sed 's/Use% //'
+echo -ne "UW EM1    : \t";echo $EMERG| sed 's/Use% //'
