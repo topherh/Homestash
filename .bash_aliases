@@ -12,6 +12,7 @@ alias t60='tail -n 60'
 alias h60='head -n 60'
 ## Git Shortcuts ##
 alias gci='git ci -am'
+alias gpo='git push origin'
 ## Graphical Environments ##
 alias emacs='emacs -nw'
 alias gvim="gvim -reverse 2>/dev/null"
