@@ -31,11 +31,6 @@ logout.sh
 
 DEPRECATED: Don't use anymore
 
-mysql-backup.sh
-===============
-
-Horribly useful mysql backup
-
 notebook.sh
 ===========
 
