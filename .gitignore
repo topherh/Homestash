@@ -1,4 +1,4 @@
 *.swp
 *.svn
 *.py?
-weather
+.conky/weather
