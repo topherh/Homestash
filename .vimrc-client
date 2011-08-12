@@ -48,6 +48,7 @@ set nocompatible
 let @h = "yypVr"
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+nmap <silent> <C-\> :NERDTreeToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> ,n :set number!<CR>
 nnoremap <silent> ,l :set list!<CR>
@@ -58,6 +59,7 @@ nnoremap <silent> ,D :diffoff<CR>
 nnoremap <silent> ,DD :diffoff!<CR>
 nnoremap <silent> ,tw :set tw=80<CR>
 nnoremap <silent> ,TW :set tw=0<CR>
+nnoremap <silent> <C-L> :noh<CR><C-L>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 "Wiki/Documentation
