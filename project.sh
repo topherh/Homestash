@@ -1,7 +1,22 @@
 #!/bin/bash
 
-google-chrome &
-sleep 1
-firefox -no-remote -P Development &
-sleep 1
-gnome-terminal --maximize &
+## What do we need for a new project ##
+## Project Type:
+## Short Name:
+## Full Name:
+
+NAME=$1
+DIR=~/Applications/$NAME 
+
+mkdir $DIR
+cd $DIR
+git init .
+
+echo '' > README.rst
+echo '' > TODO.txt
+echo '' > CHANGELOG.txt
+
+git add * 
+git commit -am "Created Stub for $NAME"
+
+
