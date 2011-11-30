@@ -43,6 +43,7 @@ set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vi
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set termencoding=utf-8
 set bs=2
+set wildignore+=*.o,*.obj,.git,*.py?
 " vim: set ft=vim :
 set nocompatible
 let @h = "yypVr"
@@ -63,29 +64,28 @@ nnoremap <silent> ,TW :set tw=0<CR>
 nnoremap <silent> <C-L> :noh<CR><C-L>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-"Wiki/Documentation
+
+map <F4> :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} --exclude=*.py?\ --exclude=*.{po,pot,mo,swp} . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+"map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
+""""""""""""""""""""""""""""""
+" => Vim grep
+""""""""""""""""""""""""""""""
+set grepprg=/bin/grep\ -inr\ --color=auto\ --exclude-dir=*.{svn,git,egg-info}\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
+
+""""""""""""""""""""""""""""""
+" => Wiki/Documentation
+""""""""""""""""""""""""""""""
 map <F2> a== <C-R>=strftime("%r")<CR> ==<CR><CR>
-map <F3> :VimwikiSearch 
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+"map <F3> :VimwikiSearch 
 map <F7> :setlocal spell! spelllang=en_us<CR>
 map <leader>wc :Calendar<CR>
 map <leader>tt <Plug>VimwikiToggleListItem
 map <leader>wg :VimwikiGoto 
+
+""""""""""""""""""""""""""""""
+" => NerdTree
+""""""""""""""""""""""""""""""
 let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
 let g:netrw_liststyle = 3
 let NERDTreeIgnore = ['\.vim$','\~$','\.sw[op]$','\.svn$','\.py[oc]$']
-" function list
-function! Browser ()
-  let line0 = getline (".")
-  let line = matchstr (line0, "http[^ ]*")
-  :if line==""
-  let line = matchstr (line0, "ftp[^ ]*")
-  :endif
-  :if line==""
-  let line = matchstr (line0, "file[^ ]*")
-  :endif
-  " echo line
-  exec ":silent !firefox ".line
-endfunction
-map <C-F3> :call Browser ()<CR>
-
