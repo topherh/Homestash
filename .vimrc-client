@@ -80,7 +80,7 @@ map <F2> a== <C-R>=strftime("%r")<CR> ==<CR><CR>
 "map <F3> :VimwikiSearch 
 map <F7> :setlocal spell! spelllang=en_us<CR>
 map <leader>wc :Calendar<CR>
-map <leader>tt <Plug>VimwikiToggleListItem
+map <leader>f <Plug>VimwikiToggleListItem
 map <leader>wg :VimwikiGoto 
 
 """"""""""""""""""""""""""""""
