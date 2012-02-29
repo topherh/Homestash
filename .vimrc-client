@@ -20,10 +20,13 @@ set directory=~/.vim/tmp
 set backspace=indent,eol,start
 set expandtab
 "make it more universal
+hi Normal     guifg=gray guibg=black
+hi Visual     gui=none guifg=black guibg=yellow
+colorscheme jellybeans
 if has('gui_running')
     map <S-Insert> <MiddleMouse>
     " colorscheme pablo
-    colorscheme koehler 
+    " colorscheme koehler 
     set mouse=a
     " Remove menu bar
     set guioptions-=m
@@ -68,14 +71,14 @@ match OverLength /\%81v.\+/
 map <F4> :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} --exclude=*.py?\ --exclude=*.{po,pot,mo,swp} . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 "map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim grep
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set grepprg=/bin/grep\ -inr\ --color=auto\ --exclude-dir=*.{svn,git,egg-info}\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Wiki/Documentation
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F2> a== <C-R>=strftime("%r")<CR> ==<CR><CR>
 "map <F3> :VimwikiSearch 
 map <F7> :setlocal spell! spelllang=en_us<CR>
@@ -83,9 +86,12 @@ map <leader>wc :Calendar<CR>
 map <leader>f <Plug>VimwikiToggleListItem
 map <leader>wg :VimwikiGoto 
 
-""""""""""""""""""""""""""""""
+nnoremap <leader>d "=strftime("%c")<CR>P
+inoremap <leader>d <C-R>=strftime("%c")<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NerdTree
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
 let g:netrw_liststyle = 3
 let NERDTreeIgnore = ['\.vim$','\~$','\.sw[op]$','\.svn$','\.py[oc]$']
