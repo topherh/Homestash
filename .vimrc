@@ -1,4 +1,6 @@
+"pathogen makes plugin management sane
 call pathogen#infect()
+
 "python is happiest here
 set tabstop=4
 set shiftwidth=4
@@ -7,8 +9,9 @@ set expandtab
 "plugin nirvana
 filetype plugin on
 let b:match_ignorecase = 1
-syntax on
+
 "personal preferences
+syntax on
 set hlsearch
 set nowrap
 set autoindent
@@ -16,27 +19,45 @@ set number
 set ruler
 set history=150
 set termencoding=utf-8
-set backspace=indent,eol,start
-"not sure on this one
-set bs=2
-"locally set helper macros
-nnoremap <silent> ,n :set number!<CR>
-nnoremap <silent> ,l :set list!<CR>
-nnoremap <silent> ,w :set wrap!<CR>
-nnoremap <silent> ,p :set autoindent!<CR>
-let @h = "yypVr"
+set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim72,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set bs=2 " == set backspace=indent,eol,start
 
-"editor improvements
-set helplang=en
+"color improvement
 colorscheme koehler
 " Remove menu bar
 set guioptions-=m
 " Remove toolbar
 set guioptions-=T
 
+"locally set helper macros
+nnoremap <silent> ,n :set number!<CR>
+nnoremap <silent> ,l :set list!<CR>
+nnoremap <silent> ,w :set wrap!<CR>
+nnoremap <silent> ,p :set autoindent!<CR>
+nnoremap <silent> ,d :diffthis<CR>
+nnoremap <silent> ,D :diffoff<CR>
+nnoremap <silent> ,DD :diffoff!<CR>
+nnoremap <silent> ,tw :set tw=80<CR>
+nnoremap <silent> ,TW :set tw=0<CR>
+nnoremap <silent> <C-L> :noh<CR><C-L>
+let @h = "yypVr"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NerdTree
+" => Vim grep
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set grepprg=/bin/grep\ -inr\ --color=auto\ --exclude-dir=*.{svn,git,egg-info}\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
+"better grep
+map <F4> :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} --exclude=*.py?\ --exclude=*.{po,pot,mo,swp} . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" BufExplorer
+let g:bufExplorerShowRelativePath=1
+
+" NERDTree
 nmap <silent> <C-\> :NERDTreeToggle<CR>
 let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
 let g:netrw_liststyle = 3

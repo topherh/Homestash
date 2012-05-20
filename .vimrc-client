@@ -17,7 +17,6 @@ set autoindent
 set number
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
-set backspace=indent,eol,start
 set expandtab
 "make it more universal
 hi Normal     guifg=gray guibg=black
@@ -43,7 +42,7 @@ set ruler
 set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim72,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set termencoding=utf-8
-set bs=2
+set bs=2 " == set backspace=indent,eol,start
 set wildignore+=*.o,*.obj,.git,*.py?
 " vim: set ft=vim :
 set nocompatible
@@ -52,7 +51,6 @@ let g:bufExplorerShowRelativePath=1
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 nmap <silent> <C-s> :wa<CR>
-nmap <silent> <C-\> :NERDTreeToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> ,n :set number!<CR>
 nnoremap <silent> ,l :set list!<CR>
