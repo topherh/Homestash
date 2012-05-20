@@ -1,4 +1,4 @@
-# .bashrc
+#  .bashrc
 
 # User specific aliases and functions
 
@@ -32,6 +32,8 @@ case $- in
    if [ -x /usr/bin/dircolors ]; then
        eval "`dircolors -b`"
        alias ls='ls --color=auto'
+   else
+       alias ls='ls -G'
    fi
 
    # enable programmable completion features (you don't need to enable

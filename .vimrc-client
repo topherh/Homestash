@@ -74,6 +74,7 @@ map <leader>wg :VimwikiGoto
 let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
 let g:netrw_liststyle = 3
 let NERDTreeIgnore = ['\.vim$','\~$','\.sw[op]$','\.svn$','\.py[oc]$']
+let g:bufExplorerShowRelativePath=1
 " function list
 function! Browser ()
   let line0 = getline (".")

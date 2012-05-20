@@ -6,6 +6,9 @@ alias ll='ls -l'
 alias lh='ll -h'
 alias cll='clear;ll'
 alias whois='whois -H'
+## Python Shortcuts
+alias py26='python2.6'
+alias venv='virtualenv-2.6'
 ## Log Management ##
 alias tf='tail -f'
 alias t60='tail -n 60'

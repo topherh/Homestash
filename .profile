@@ -2,10 +2,20 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Macports
+if [ -d "/opt/local/bin" ] ; then
+    PATH="/opt/local/bin:$PATH"
+fi
+
+if [ -d "/opt/local/sbin" ] ; then
+    PATH="/opt/local/sbin:$PATH"
+fi
+
 cd .homestash;git pull
 cd
 
 PS1="\n\[\033[33;1m\]\w\[\033[m\]\n\[\033[32m\]\h\[\033[m\] \[\033[35m\]\d\[\033[m\] -> "
+export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 set -o vi
