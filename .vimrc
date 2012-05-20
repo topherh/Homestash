@@ -7,7 +7,7 @@ set shiftwidth=4
 set expandtab
 
 "plugin nirvana
-filetype plugin on
+filetype plugin indent on
 let b:match_ignorecase = 1
 
 "personal preferences
@@ -19,7 +19,6 @@ set number
 set ruler
 set history=150
 set termencoding=utf-8
-set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim72,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set bs=2 " == set backspace=indent,eol,start
 
