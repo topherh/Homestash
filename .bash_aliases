@@ -4,6 +4,8 @@ alias lla='ls -la'
 alias la='ls -A'
 alias ll='ls -l'
 alias lh='ll -h'
+alias p='pushd'
+alias o='popd'
 alias cll='clear;ll'
 alias whois='whois -H'
 ## Python Shortcuts

@@ -11,9 +11,10 @@ set columns=250 lines=80
 set guioptions-=T "hide toolbar
 set guioptions-=m "hide menubar
 
-"Try to load happy hacking teal colour scheme
-"I copy this to ~/.vim/colors/hhteal.vim
-silent! colorscheme hhteal
+"Try to load colour scheme
+"I copy this to ~/.vim/colors/
+" silent! colorscheme 
+silent! colorscheme jellybeans
 if exists("colors_name") == 0
     "Otherwise modify the defaults appropriately
 
