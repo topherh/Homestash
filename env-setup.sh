@@ -2,6 +2,9 @@
 
 cd ~/
 
+echo "Cloning Homestash"
+git clone git@github.com:topherh/Homestash.git .homestash
+
 echo "Setup Homestash"
 # Minimal Config mostly used on servers
 ln -s .homestash/.bash_aliases
@@ -11,9 +14,6 @@ ln -s .homestash/.gitignore
 ln -s .homestash/.profile
 ln -s .homestash/.screenrc
 ln -s .homestash/.vimrc
-
-echo "Cloning Homestash"
-git clone git@github.com:topherh/Homestash.git .homestash
 
 echo "Setup vim"
 mkdir -p ~/.vim/{backup,tmp}
