@@ -2,6 +2,16 @@
 
 cd ~/
 
+echo "Setup Homestash"
+# Minimal Config mostly used on servers
+ln -s .homestash/.bash_aliases
+ln -s .homestash/.bashrc
+ln -s .homestash/.gitconfig
+ln -s .homestash/.gitignore
+ln -s .homestash/.profile
+ln -s .homestash/.screenrc
+ln -s .homestash/.vimrc
+
 echo "Cloning Homestash"
 git clone git@github.com:topherh/Homestash.git .homestash
 
@@ -18,12 +28,3 @@ cd ~/.vim/bundle
 git clone git://github.com/tpope/vim-fugitive.git
 git clone git://github.com/scrooloose/nerdtree.git
 
-echo "Setup Homestash"
-# Minimal Config mostly used on servers
-ln -s .homestash/.bash_aliases
-ln -s .homestash/.bashrc
-ln -s .homestash/.gitconfig
-ln -s .homestash/.gitignore
-ln -s .homestash/.profile
-ln -s .homestash/.screenrc
-ln -s .homestash/.vimrc
