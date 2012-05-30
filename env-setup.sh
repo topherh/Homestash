@@ -20,7 +20,7 @@ mkdir -p ~/.vim/{backup,tmp}
 
 echo "Setup Pathogen"
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
-curl -so ~/.vim/autoload/pathogen.vim \
+curl -sk -o ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 echo "Setup Plugins"
