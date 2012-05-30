@@ -19,6 +19,8 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 set backspace=indent,eol,start
 set expandtab
+" I can type :help on my own, thanks.
+noremap <F1> <Esc>
 "make it more universal
 hi Normal     guifg=gray guibg=black
 hi Visual     gui=none guifg=black guibg=yellow
