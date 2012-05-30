@@ -17,18 +17,15 @@ set autoindent
 set number
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
-set backspace=indent,eol,start
 set expandtab
 " I can type :help on my own, thanks.
 noremap <F1> <Esc>
 "make it more universal
 hi Normal     guifg=gray guibg=black
 hi Visual     gui=none guifg=black guibg=yellow
-colorscheme jellybeans
+colorscheme koehler
 if has('gui_running')
     map <S-Insert> <MiddleMouse>
-    " colorscheme pablo
-    " colorscheme koehler 
     set mouse=a
     " Remove menu bar
     set guioptions-=m
@@ -47,15 +44,15 @@ set ruler
 set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim72,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set termencoding=utf-8
-set bs=2
+set bs=2 " == set backspace=indent,eol,start
 set wildignore+=*.o,*.obj,.git,*.py?
 " vim: set ft=vim :
 set nocompatible
 let @h = "yypVr"
+let g:bufExplorerShowRelativePath=1
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 nmap <silent> <C-s> :wa<CR>
-nmap <silent> <C-\> :NERDTreeToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> ,n :set number!<CR>
 nnoremap <silent> ,l :set list!<CR>
