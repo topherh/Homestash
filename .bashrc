@@ -2,6 +2,10 @@
 
 # User specific aliases and functions
 
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then 
     . /etc/bashrc
