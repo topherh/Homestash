@@ -1,12 +1,14 @@
 #!/bin/bash
 
-
 UWPLONE2=`ssh cmsdev df -h '/dev/xvda' | awk '{print $5}'`
 UWPLONE3=`ssh cms df -h '/dev/mapper/datavg-data' | awk '{print $4}'`
 EMERG=`ssh em1 df -h '/dev/xvda' | awk '{print $5}'`
-INFO1=`ssh info1 df -h '/dev/sda7' | awk '{print $5}'`
+STAG=`ssh staging df -h '/dev/xvda1 ' | awk '{print $5}'`
+PROD=`ssh prod df -h '/dev/xvda1' | awk '{print $5}'`
 
-echo -ne "CMS Devel : \t";echo $UWPLONE2| sed 's/Use% //'
-echo -ne "CMS Prod  : \t";echo $UWPLONE3| sed 's/Avail //'
-echo -ne "UW EM1    : \t";echo $EMERG| sed 's/Use% //'
-echo -ne "UW INFO1  : \t";echo $INFO1| sed 's/Use% //'
+echo "# Disk Space Available #"
+echo -ne "CMS.old Devel :   ";echo $UWPLONE2| sed 's/Use% //'
+echo -ne "CMS.old Prod  :   ";echo $UWPLONE3| sed 's/Avail //'
+echo -ne "CMS.new Stag  :   ";echo $STAG| sed 's/Use% //'
+echo -ne "CMS.new Prod  :   ";echo $PROD| sed 's/Use% //'
+echo -ne "UW EM1        :   ";echo $EMERG| sed 's/Use% //'
