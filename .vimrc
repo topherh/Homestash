@@ -51,7 +51,7 @@ let @h = "yypVr"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set grepprg=/bin/grep\ -inr\ --color=auto\ --exclude-dir=*.{svn,git,egg-info}\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
+set grepprg=/usr/bin/grep\ -inr\ --color=auto\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
 "better grep
 map <F4> :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} --exclude=*.py?\ --exclude=*.{po,pot,mo,swp} . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
