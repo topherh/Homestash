@@ -28,3 +28,6 @@ cd ~/.vim/bundle
 git clone git://github.com/tpope/vim-fugitive.git
 git clone git://github.com/scrooloose/nerdtree.git
 
+## For tracking purposes, but not universially installed
+## git clone git://github.com/tpope/vim-rails.git
+## git clone git://git.wincent.com/command-t.git
