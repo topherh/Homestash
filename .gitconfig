@@ -1,36 +1,42 @@
 [user]
-    name = Chris Heiland
-    email = cheiland@uw.edu
+	name = Chris Heiland
+	email = cheiland@uw.edu
 [color]
-    ui = auto
+	ui = auto
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 [color]
-    ui = true
+	ui = true
 [color "diff"]
-    whitespace = red reverse
+	whitespace = red reverse
 [core]
-    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    excludesfile = ~/.gitignore
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /Users/cheiland/.gitignore
 [alias]
-    st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    unstage = reset HEAD
-    lg = log -p
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    ls = ls-files
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	unstage = reset HEAD
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
