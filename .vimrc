@@ -1,5 +1,9 @@
+" This must be first, because it changes other options as side effect
+set nocompatible
+
 "pathogen makes plugin management sane
 call pathogen#infect()
+call pathogen#helptags()
 
 "python is happiest here
 set tabstop=4
