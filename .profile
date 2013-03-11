@@ -11,8 +11,8 @@ if [ -d "/opt/local/sbin" ] ; then
     PATH="/opt/local/sbin:$PATH"
 fi
 
-cd .homestash;git pull
-cd
+## cd .homestash;git pull
+## cd
 
 PS1="\n\[\033[33;1m\]\w\[\033[m\]\n\[\033[32m\]\h\[\033[m\] \[\033[35m\]\D{%a %H:%M}\[\033[m\] -> "
 export LSCOLORS="gxfxcxdxbxegedabagacad"
