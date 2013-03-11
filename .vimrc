@@ -73,8 +73,7 @@ let g:bufExplorerShowRelativePath=1
 map <leader>sc :setlocal spell! spelllang=en_us<CR>
 
 " NERDTree
-nmap <silent> <C-\> :NERDTreeToggle<CR>
-let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
-let g:netrw_liststyle = 3
-let NERDTreeIgnore = ['\.vim$','\~$','\.sw[op]$','\.svn$','\.py[oc]$']
-
+" nmap <silent> <C-\> :NERDTreeToggle<CR>
+" let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
+" let g:netrw_liststyle = 3
+" let NERDTreeIgnore = ['\.vim$','\~$','\.sw[op]$','\.svn$','\.py[oc]$']
