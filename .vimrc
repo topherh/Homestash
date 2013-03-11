@@ -21,7 +21,9 @@ set nowrap
 set autoindent
 set number
 set ruler
-set history=150
+set history=1000
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
 set termencoding=utf-8
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set bs=2 " == set backspace=indent,eol,start
