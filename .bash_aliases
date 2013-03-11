@@ -7,7 +7,6 @@ alias lh='ll -h'
 alias p='pushd'
 alias o='popd'
 alias cll='clear;ll'
-alias whois='whois -H'
 ## Python Shortcuts
 alias py26='python2.6'
 alias venv='virtualenv-2.6'
