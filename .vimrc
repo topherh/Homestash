@@ -51,9 +51,9 @@ let @h = "yypVr"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set grepprg=/bin/grep\ -inr\ --color=auto\ --exclude-dir=*.{svn,git,egg-info}\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
+set grepprg=/usr/bin/grep\ -inr\ --color=auto\ --exclude=*.py?\ --exclude=*.{po,pot,mo,swp}
 "better grep
-map <F4> :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} --exclude=*.py?\ --exclude=*.{po,pot,mo,swp} . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+map <leader>f :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} --exclude=*.py?\ --exclude=*.{po,pot,mo,swp} . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
@@ -62,8 +62,12 @@ map <F4> :execute "grep -srnw --binary-files=without-match *.{svn,git,egg-info} 
 " BufExplorer
 let g:bufExplorerShowRelativePath=1
 
+" Spelling
+map <leader>sc :setlocal spell! spelllang=en_us<CR>
+
 " NERDTree
 nmap <silent> <C-\> :NERDTreeToggle<CR>
 let g:netrw_list_hide = '.swp,\.swo,\.svn,\.pyo,\.pyc'
 let g:netrw_liststyle = 3
 let NERDTreeIgnore = ['\.vim$','\~$','\.sw[op]$','\.svn$','\.py[oc]$']
+
