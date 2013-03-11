@@ -21,6 +21,7 @@ set history=150
 set termencoding=utf-8
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set bs=2 " == set backspace=indent,eol,start
+set laststatus=2 " Show statusline with and without split
 
 "color improvement
 colorscheme koehler

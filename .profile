@@ -34,4 +34,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+<<<<<<< HEAD
 
+=======
+>>>>>>> 999bbee994d40699884f070a6ceac15aa888b1d4
