@@ -22,7 +22,8 @@
 	whitespace = red reverse
 [core]
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/cheiland/.gitignore
+	excludesfile = ~/.gitignore
+	quotepath = false
 [alias]
 	st = status
 	ci = commit
