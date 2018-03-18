@@ -19,9 +19,8 @@ echo "Setup vim"
 mkdir -p ~/.vim/{backup,tmp}
 
 echo "Setup Pathogen"
-mkdir -p ~/.vim/autoload ~/.vim/bundle; \
-curl -sk -o ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle;
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 echo "Setup Plugins"
 cd ~/.vim/bundle
