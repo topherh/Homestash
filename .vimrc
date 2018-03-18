@@ -2,8 +2,7 @@
 set nocompatible
 
 "pathogen makes plugin management sane
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
 
 "python is happiest here
 set tabstop=4
