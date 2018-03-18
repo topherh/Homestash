@@ -1,6 +1,6 @@
 [user]
 	name = Chris Heiland
-	email = cheiland@uw.edu
+	email = heiland@gmail.com
 [color]
 	ui = auto
 [color "branch"]
@@ -43,3 +43,8 @@
 	trustExitCode = true
 [merge]
 	tool = vimdiff
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
