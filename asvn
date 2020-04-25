@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in `svn st | awk '{print $2}'`; do
+STATUS=`svn st $i | awk '{print $1}'`;
+if [ $STATUS == '?' ]
+then
+    svn add $i
+fi
+done
