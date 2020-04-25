@@ -2,7 +2,7 @@
 alias l='ls -CF'
 alias lla='ls -la'
 alias la='ls -A'
-alias ll='ls -l'
+alias ll='ls -lia'
 alias lh='ll -h'
 alias p='pushd'
 alias o='popd'
